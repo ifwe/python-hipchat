@@ -17,7 +17,7 @@ User.delete = \
                         ReturnType=UserDeleteStatus, 
                         url="https://api.hipchat.com/v1/users/delete", 
                         data=True))
-User.list_all = \
+User.list = \
     classmethod(partial(call_hipchat, 
                         ReturnType=lambda x: map(User, map(lambda y: {'user': y}, x['users'])), 
                         url="https://api.hipchat.com/v1/users/list", 
