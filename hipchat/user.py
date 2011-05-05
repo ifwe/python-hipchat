@@ -22,14 +22,12 @@ def call_hipchat(cls, ReturnType, url, data=True, **kw):
     req = Request(url=url + '?%s' % urlencode(auth))
     if data:
         req.add_data(urlencode(kw.items()))
-    print ReturnType
     return ReturnType(json.load(urlopen(req)))
                      
 
 class HipChatObject(object):
     def __init__(self, jsono):
         self.jsono = jsono
-        print jsono
         for k, v in jsono[self.sort].iteritems():
             setattr(self, k, v)
 
