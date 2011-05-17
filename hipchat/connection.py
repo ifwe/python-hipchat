@@ -33,3 +33,6 @@ class HipChatObject(object):
 
     def __str__(self):
         return json.dumps(self.jsono)
+
+    def get_json(self):
+        return self.jsono
