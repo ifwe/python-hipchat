@@ -1,6 +1,11 @@
 import itertools
-import json
 import random
+import sys
+
+if sys.version_info[0] == 2 and sys.version_info[1] < 6:
+    import simplejson as json
+else:
+    import json
 
 from os.path import exists
 from sys import argv
