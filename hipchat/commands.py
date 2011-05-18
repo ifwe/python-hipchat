@@ -14,6 +14,8 @@ import hipchat.config
 import hipchat.room
 import hipchat.user
 
+class NoConfigException(Exception): pass
+
 def init_sys_cfg():
     if exists('hipchat.cfg'):
         hipchat.config.init_cfg('hipchat.cfg')
@@ -21,6 +23,8 @@ def init_sys_cfg():
         hipchat.config.init_cfg('~/.hipchat.cfg')
     elif exists('/etc/hipchat.cfg'):
         hipchat.config.init_cfg('/etc/hipchat.cfg')
+    else:
+        raise NoConfigException
 
 class ArgsException(Exception): pass
 
