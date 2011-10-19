@@ -17,7 +17,7 @@ class MessageSentStatus(HipChatObject):
 
 Room.history = \
     classmethod(partial(call_hipchat, 
-                        ReturnType=lambda x: map(Room, map(lambda y: {'message': y}, x['messages'])), 
+                        ReturnType=lambda x: map(Message, map(lambda y: {'message': y}, x['messages'])), 
                         url="https://api.hipchat.com/v1/rooms/history", 
                         data=False))
 Room.list = \
