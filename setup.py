@@ -25,6 +25,7 @@ setup(
             'hipchat-set-user-timezone = hipchat.commands:set_user_timezone',
             'hipchat-set-user-title = hipchat.commands:set_user_title',
             'hipchat-del-user = hipchat.commands:del_user',
+            'hipchat-undel-user = hipchat.commands:undel_user',
             ]
         },
     )

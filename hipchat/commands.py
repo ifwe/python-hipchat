@@ -141,3 +141,12 @@ def del_user():
         raise ArgsException("%s <email>" % argv[0])
     init_sys_cfg()
     print hipchat.user.User.delete(user_id=email)
+
+
+def undel_user():
+    try:
+        dont_care, email = argv
+    except ValueError:
+        raise ArgsException("%s <email>" % argv[0])
+    init_sys_cfg()
+    print hipchat.user.User.undelete(user_id=email)

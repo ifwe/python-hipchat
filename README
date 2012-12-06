@@ -151,6 +151,7 @@ hipchat-set-user-timezone
 hipchat-set-user-title
 hipchat-show-user
 hipchat-update-user
+hipchat-undel-user
 
 Run them with no parameters to find out what they do
 
