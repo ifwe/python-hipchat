@@ -30,8 +30,12 @@ class ArgsException(Exception): pass
 
 
 def list_users():
+    include_deleted = 0
+    if len(argv) > 1:
+        include_deleted = argv[1]
     init_sys_cfg()
-    print json.dumps(map(hipchat.user.User.get_json, hipchat.user.User.list()))
+    print json.dumps(map(hipchat.user.User.get_json,
+        hipchat.user.User.list(include_deleted=include_deleted)))
 
 
 def add_user():
