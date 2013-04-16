@@ -6,6 +6,7 @@ setup(
     name = "hipchat",
     version = "0.0.1",
     packages = find_packages(),
+    depends = ['configobj'],
 
     author = "Yaakov M Nemoy",
     author_email = "loup@hexago.nl",
