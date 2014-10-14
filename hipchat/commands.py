@@ -83,6 +83,17 @@ def show_user():
     print hipchat.user.User.show(user_id=email)
 
 
+def set_user_email():
+    try:
+        dont_care, email, new_email = argv
+    except ValueError:
+        raise ArgsException("%s <email> <new_email>" % argv[0])
+    init_sys_cfg()
+    user_id = hipchat.user.User.show(user_id=email).user_id
+    print hipchat.user.User.update(user_id=user_id,
+                                   email=new_email)
+
+
 def set_user_password():
     try:
         dont_care, email, password = argv

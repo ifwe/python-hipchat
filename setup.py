@@ -20,6 +20,7 @@ setup(
             'hipchat-enable-user = hipchat.commands:enable_user',
             'hipchat-list-users = hipchat.commands:list_users',
             'hipchat-show-user = hipchat.commands:show_user',
+            'hipchat-set-user-email = hipchat.commands:set_user_email',
             'hipchat-set-user-password = hipchat.commands:set_user_password',
             'hipchat-set-user-name = hipchat.commands:set_user_name',
             'hipchat-set-user-admin = hipchat.commands:set_user_admin',
